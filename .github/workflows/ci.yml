@@ -1,6 +1,7 @@
 name: CI
 
 on:
+  workflow_dispatch:
   pull_request:
   push:
     branches:
@@ -48,6 +49,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: d52ce68efe0dac1dbf7d22bb0cb5a54021997173
 
       - name: Install packages
         if: matrix.install
@@ -176,6 +179,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: d52ce68efe0dac1dbf7d22bb0cb5a54021997173
 
       - name: Setup Boost
         shell: cmd
