@@ -3,13 +3,14 @@
 // (See accompanying file LICENSE_1_0.txt or copy at
 // http://www.boost.org/LICENSE_1_0.txt)
 
-#include <boost/lexical_cast.hpp>
-#include <boost/core/lightweight_test.hpp>
 #include <clocale>
 #include <locale>
 #include <string>
 #include <limits>
 #include <cmath>
+
+#include <boost/core/lightweight_test.hpp>
+#include <boost/lexical_cast.hpp>
 
 template<class Char>
 class punctuation : public std::numpunct<Char>
